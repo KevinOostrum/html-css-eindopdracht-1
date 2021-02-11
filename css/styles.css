@@ -52,6 +52,21 @@ hr {
   width: 50%;
 }
 
+/* grid */
+
+.grid-page {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  grid-template-rows: 60px 1fr 1fr 1.5fr 150px;
+  height: 100vh;
+  grid-template-areas:
+    ". nav nav ."
+    ". header h-img ."
+    ". dip comp ."
+    ". proj proj ."
+    ". footer footer .";
+}
+
 nav {
   grid-area: nav;
   background-color: #e7e6e1;
@@ -75,50 +90,6 @@ aside {
 footer {
   grid-area: footer;
   background-color: #e7e6e1;
-}
-
-/* Table Styling */
-.tables {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.tables td,
-.customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-.tables tr:nth-child(even) {
-  background-color: #e7e6e1;
-}
-
-.tables tr:hover {
-  background-color: #f7f6e7;
-}
-
-.tables th {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  background-color: #314e52;
-  color: white;
-}
-
-/* Class selectors */
-
-.grid-page {
-  display: grid;
-  grid-template-columns: 50px 1fr 1fr 50px;
-  grid-template-rows: 60px 1fr 1fr 1.5fr 150px;
-  height: 1800px;
-  grid-template-areas:
-    ". nav nav ."
-    ". header h-img ."
-    ". dip comp ."
-    ". proj proj ."
-    ". footer footer .";
 }
 
 .header-img {
@@ -189,12 +160,42 @@ footer {
   color: grey;
 }
 
+/* Table Styling */
+
+.tables {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tables td,
+.customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tables tr:nth-child(even) {
+  background-color: #e7e6e1;
+}
+
+.tables tr:hover {
+  background-color: #f7f6e7;
+}
+
+.tables th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #314e52;
+  color: white;
+}
+
 /* Media Selectors */
 
-@media (max-width: 820px) {
+@media screen and (max-width: 992px) {
   html,
   body {
-    margin: 0px 5px 0px 5px;
+    margin: 0;
   }
 
   .grid-page {
@@ -210,15 +211,29 @@ footer {
       "footer";
   }
 
-  .proj-content {
-    height: 470px;
-    width: 400px;
+  .navigation ul {
+    list-style-type: none;
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pasfoto {
+    align-self: center;
+    border-radius: 5%;
   }
 
   .proj-container {
     justify-content: center;
-    padding-top: 50px;
+    padding: auto;
     text-align: left;
     color: #f7f6e7;
+  }
+
+  .proj-content {
+    height: 470px;
+    width: 600px;
   }
 }
