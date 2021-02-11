@@ -58,7 +58,7 @@ hr {
   display: grid;
   grid-template-columns: 50px 1fr 1fr 50px;
   grid-template-rows: 60px 1fr 1fr 1.5fr 150px;
-  height: 100vh;
+  height: 1800px;
   grid-template-areas:
     ". nav nav ."
     ". header h-img ."
@@ -191,6 +191,24 @@ footer {
 }
 
 /* Media Selectors */
+@media screen and (max-width: 1400px) {
+  html,
+  body {
+    margin: 0;
+  }
+
+  .proj-container {
+    justify-content: center;
+    padding: 100px;
+    text-align: left;
+    color: #f7f6e7;
+  }
+
+  .proj-content {
+    height: 500px;
+    width: 700px;
+  }
+}
 
 @media screen and (max-width: 992px) {
   html,
@@ -201,6 +219,7 @@ footer {
   .grid-page {
     grid-template-columns: 100%;
     grid-template-rows: 60px 1fr 1fr 1fr 1fr 1500px 150px;
+    height: 100vh;
     grid-template-areas:
       "nav"
       "header"
@@ -234,6 +253,6 @@ footer {
 
   .proj-content {
     height: 470px;
-    width: 600px;
+    width: 450px;
   }
 }
